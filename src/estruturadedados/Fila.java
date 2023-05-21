@@ -26,10 +26,16 @@ public class Fila<T> implements FilaInterface<T> {
 
 	    last = lastTemp;
         array[ last ] = valor;
+        
 		
         // inserindo o primeiro elemento
         if (first == -1) {
             first = 0;
+        }
+        System.out.println("Inicio: "+ first);
+        System.out.println("Fim: "+ last);
+        for(int i = 0; i < last; i++) {
+        	System.out.println("Pos " + i + ": " + array[i]);
         }
 	}
 
@@ -54,6 +60,11 @@ public class Fila<T> implements FilaInterface<T> {
         else
         {
         	first = (first + 1) % sizeMax;
+        }
+        System.out.println("Inicio: "+ first);
+        System.out.println("Fim: "+ last);
+        for(int i = 0; i < last; i++) {
+        	System.out.println("Pos " + i + ": " + array[i]);
         }
 
 	    return retorno;
